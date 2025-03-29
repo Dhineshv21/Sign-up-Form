@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Norse Bold";
+  src: url("./assets/Norse-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+:root {
+  --purple: #a300cc;
+  --light-gray: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+.img {
+  width: 40%;
+  position: relative;
+  background-image: url("./assets/background.jpg");
+  background-size: cover;
+}
+
+.logo {
+  height: 125px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 25%;
+}
+
+.odin-logo {
+  height: 100px;
+}
+
+.logo-text {
+  text-transform: uppercase;
+  font-family: "Norse Bold";
+  color: white;
+  font-size: 96px;
+}
+
+.credit {
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+}
+.credit a {
+  color: inherit;
+}
+
+.content {
+  background-color: #f9fafb;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text + .intro-text {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.intro-text {
+  font-weight: bold;
+  font-size: 20px;
+  width: 60%;
+}
+
+form {
+  width: calc(100% + 80px);
+  background-color: white;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  margin-left: -40px;
+  margin-right: -40px;
+  padding: 40px;
+}
+
+.form-heading {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+  border: none;
+}
+
+.input-group label {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.7px;
+  font-weight: bold;
+}
+
+.input-group input {
+  height: 25px;
+  padding: 4px 8px;
+  outline: none;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  width: 200px;
+}
+
+.input-group input:invalid {
+  border-color: red;
+}
+
+.input-group input:focus {
+  border-color: blue;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.submit {
+    background-color: var(--purple);
+}
